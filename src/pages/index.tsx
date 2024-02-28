@@ -1,9 +1,15 @@
-import Image from 'next/image';
+import { UserButton } from '@clerk/nextjs';
+import {} from '@clerk/nextjs';
+
+import { LoginForm } from './components/LoginForm';
 
 export default function Home() {
 	return (
-		<main>
-			<div>Hi</div>
-		</main>
+		<>
+			<main className='grid grid-cols-2'>
+				<div />
+				<LoginForm />
+			</main>
+		</>
 	);
 }

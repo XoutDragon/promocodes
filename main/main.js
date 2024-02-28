@@ -17,6 +17,8 @@ const createWindow = () => {
 		},
 	});
 
+	win.setMenu(null);
+
 	if (app.isPackaged) {
 		appServe(win).then(() => {
 			win.loadURL('app://-');
