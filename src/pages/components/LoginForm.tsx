@@ -17,6 +17,7 @@ import { FaFacebook, FaDiscord, FaGoogle } from 'react-icons/fa';
 
 import { motion } from 'framer-motion';
 import { LampContainer } from '../../components/ui/lamp';
+import Link from 'next/link';
 
 export const LoginForm = () => {
 	return (
@@ -42,6 +43,14 @@ export const LoginForm = () => {
 								</h2>
 								<SignInOAuthButtons />
 							</form>
+							<div>
+								<Button variant={'ghost'} className='text-white'>
+									<Link href='/tos'>Terms of Service</Link>
+								</Button>
+								<Button variant={'ghost'} className='text-white'>
+									<Link href='/policy'>Privacy Policy</Link>
+								</Button>
+							</div>
 						</motion.h1>
 					</LampContainer>
 				</div>
@@ -69,15 +78,15 @@ function SignInOAuthButtons() {
 	return (
 		<>
 			<Button variant={'outline'} className=' flex justify-between'>
-				<FaGoogle />
+				<FaGoogle className='text-red-500 w-6 h-6' />
 				<span>Sign in with Google</span>
 			</Button>
 			<Button variant={'outline'} className=' justify-between'>
-				<FaFacebook />
+				<FaFacebook className='text-blue-500 w-6 h-6' />
 				<span>Sign in with Facebook</span>
 			</Button>
 			<Button variant={'outline'} className=' justify-between'>
-				<FaDiscord />
+				<FaDiscord className='text-blue-700 w-6 h-6' />
 				<span>Sign in with Discord</span>
 			</Button>
 		</>
