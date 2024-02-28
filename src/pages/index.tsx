@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main className="grid grid-cols-2 h-full">
         <div className="relative w-full h-full">
-          <Image src="/hero.gif" layout="fill" alt="hero" objectFit="cover" />
+          <Image className="heroimg" src="/R.gif" layout="fill" alt="hero" objectFit="cover"/>
         </div>
         <LoginForm />
       </main>
