@@ -1,17 +1,12 @@
-import { UserButton } from "@clerk/nextjs";
-import Image from "next/image";
-
-import { LoginForm } from "./components/LoginForm";
+import { SignOutButton, UserButton } from '@clerk/nextjs';
+import Image from 'next/image';
 
 export default function Home() {
-  return (
-    <>
-      <main className="grid grid-cols-2 h-full">
-        <div className="relative w-full h-full">
-          <Image className="heroimg" src="/R.gif" layout="fill" alt="hero" objectFit="cover"/>
-        </div>
-        <LoginForm />
-      </main>
-    </>
-  );
+	return (
+		<>
+			<main className=''>
+				<UserButton afterSignOutUrl='/' />
+			</main>
+		</>
+	);
 }
